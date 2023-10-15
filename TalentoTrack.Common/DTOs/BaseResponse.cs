@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace TalentoTrack.Common.DTOs.Account
 {
-    public class LoginResponse : BaseResponse
+    public class BaseResponse
     {
-
+        public bool Success { get; set; }
+        public string? ErrorMessage { get; set; }
     }
-
-    //public class Error
-    //{
-    //    public int MyProperty { get; set; }
-    //}
 }
