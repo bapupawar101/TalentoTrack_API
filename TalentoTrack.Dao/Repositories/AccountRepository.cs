@@ -22,7 +22,7 @@ namespace TalentoTrack.Dao.Repositories
 
         public async Task<LoginDetails> GetLoginDetails(string userName, string password)
         {
-            var dbRecord = await _dbContext.tbl_login_details.Where(p => (p.UserName != null && p.UserName.Equals(userName)) && (p.Password != null && p.Password.Equals(password))).FirstOrDefaultAsync();
+            var dbRecord = await _dbContext.tbl_login_details.Where(p => (p.UserName != null && p.UserName.Equals(userName)) && (p.Password != null && p.Password.Equals(password))).Include(p=> p.User).FirstOrDefaultAsync();
 
             return dbRecord!;
         }

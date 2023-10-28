@@ -11,6 +11,6 @@ namespace TalentoTrack.Common.Entities
         public bool IsBlocked { get; set; }
 
         [ForeignKey("UserId")]
-        public User? User { get; set; }
+        public virtual User? User { get; set; }
     }
 }

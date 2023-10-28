@@ -33,7 +33,7 @@ namespace TelentoTrack_API.Controllers
             return response;
         }
 
-        [HttpGet(Name = "GetById/{Id}")]
+        [HttpGet(Name = "GetById")]
         public async Task<BaseResponse> GetById([FromQuery] GetByIdRequest reqest)
         {
             var response = await _courseService.GetById(reqest);
@@ -41,7 +41,7 @@ namespace TelentoTrack_API.Controllers
             return response;
         }
 
-        [HttpDelete(Name = "Delete/{Id}")]
+        [HttpDelete(Name = "Delete")]
         public async Task<BaseResponse> Delete([FromQuery] int id)
         {
             var response = await _courseService.Delete(id);
@@ -49,7 +49,7 @@ namespace TelentoTrack_API.Controllers
             return response;
         }
 
-        [HttpPut(Name = "Update/{Id}")]
+        [HttpPut(Name = "Update")]
         public async Task<BaseResponse> Update([FromBody] InsertUpdateCourseRequest request)
         {
             var response = await _courseService.InsertUpdate(request);

@@ -31,6 +31,7 @@ namespace TalentoTrack.Service
                 }
                 else
                 {
+                    response.User = dbUser.User!;
                     response.Success = true;
                 }
 
